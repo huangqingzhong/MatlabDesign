@@ -1,0 +1,7 @@
+
+*.asv
+*.[Hh]ex
+*.[Bb]in
+
+./**/[Bb]ackup*/
+
