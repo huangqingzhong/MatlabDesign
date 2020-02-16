@@ -1,5 +1,6 @@
-function y = gen_hdl_test_data( gap, bitwid, varargin )
-%GEN_HDL_TEST_DATAFILE generate HDL-testing data
+function res = gen_hdl_test_datafile( fn, gap, bitwid, varargin )
+%GEN_HDL_TEST_DATAFILE generate HDL-testing data and write to txt-file
+%  fn : file name
 %  gap : the gaps limimts, if scalar, constant gap
 %  bitwid : bit-width used while normalizing
 %  varargin : the inputs
@@ -11,8 +12,8 @@ function y = gen_hdl_test_data( gap, bitwid, varargin )
 % byHqz @20200215, version 1.0
 % 
 
-if nargin < 3
-    y = [];
+if nargin < 4
+    res = 0;
     return;
 end
 
@@ -42,6 +43,10 @@ for ii = 1:length(varargin)
         end
     end
 end
+
+% write_datafile(fn, reshape(y.',[],1) );
+write_datafile(fn, y);
+res = 1;
 
 end
 

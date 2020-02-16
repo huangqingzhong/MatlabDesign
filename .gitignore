@@ -4,4 +4,5 @@
 *.[Bb]in
 
 ./**/[Bb]ackup*/
+./**/[Tt]estout*.txt
 
