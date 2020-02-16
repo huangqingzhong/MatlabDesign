@@ -44,8 +44,7 @@ for ii = 1:length(varargin)
     end
 end
 
-% write_datafile(fn, reshape(y.',[],1) );
-write_datafile(fn, y);
+write_datafile(fn, reshape(y.',[],1) );
 res = 1;
 
 end
